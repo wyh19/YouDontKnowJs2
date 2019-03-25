@@ -20,3 +20,7 @@ var a = null;
 if (!a && typeof a === "object") {
     console.log('a is null')
 }
+
+//还有一种情况:
+// typeof function a(){ /* .. */ } === "function"; // true
+//它实际上是 object 的一个“子类型”。具体来说，函数是“可调用对象”，它有一个内部属 性 [[Call]]，该属性使其可以被调用
